@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhanced HTML5 Form.Includes accessibility, lists, tables, media, and form fields.">
+    <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Student Registration</h1>
+        <nav>
+            <ul>
+                <li><a href="#form-section">Form</a></li>
+                <li><a href="#course-list">Courses</a></li>
+                <li><a href="#fees-table">Fees</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section: Courses as a list -->
+        <section id="course-list">
+            <h2>Available Courses</h2>
+            <ol>
+                <li>Web Development Basics</li>
+                <li>Python Programming</li>
+                <li>Data Analysis</li>
+            </ol>
+        </section>
+
+        <!-- Section: Fees table -->
+        <section id="fees-table">
+            <h2>Course Fees</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Fee (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development Basics</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Python Programming</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Data Analysis</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section: Media -->
+        <section>
+            <h2>Introduction Video</h2>
+            <video controls width="320">
+                <source src="intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Section: Form -->
+        <section id="form-section">
+            <h2>Registration Form</h2>
+            <form action="submit.php" method="post" autocomplete="on">
+                
+                <!-- Readonly field -->
+                <label for="student-id">Student ID (Read Only):</label>
+                <input type="text" id="student-id" name="student-id" value="STU-2025-001" readonly><br><br>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required><br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">--Choose a course--</option>
+                    <option value="web">Web Development Basics</option>
+                    <option value="python">Python Programming</option>
+                    <option value="data">Data Analysis</option>
+                </select><br><br>
+
+                <label for="bio">Short Bio:</label><br>
+                <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself"></textarea><br><br>
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
